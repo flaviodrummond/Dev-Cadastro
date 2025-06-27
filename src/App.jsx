@@ -1,16 +1,53 @@
-import { Titulo, Container } from "./style";
+import { Titulo, Container, ImagemCentral, Form, CaixaDeInput, Input, InputLabel, Button } from "./style";
 
-function App() {
-  
+function Home() {
+
 
   return (
 
-      <Container>
-        <h1> Conceitos de React</h1>
-        <Titulo> Aprendendo sobre CSS no react </Titulo>
-      </Container>
+    <Container>
+      <ImagemCentral>
+
+        <img src="" alt="" />
+
+      </ImagemCentral>
+
+      <Form>
+        <Titulo> Cadastro de Novos Usuários </Titulo>
+
+        <CaixaDeInput>
+          <div>
+
+            <div>
+              <InputLabel>
+                Nome <span>*</span>
+              </InputLabel>
+              <Input type="text" placeholder="Nome do usuário" />
+            </div>
+
+            <div>
+              <InputLabel>
+                CPF <span>*</span>
+              </InputLabel>
+              <Input type="number" placeholder="CPF do usuário" />
+            </div>
+
+          </div>
+
+          <div>
+            <InputLabel>
+              E-mail <span>*</span>
+            </InputLabel>
+            <Input type="email" placeholder="E-mail do usuário" />
+          </div>
+
+        </CaixaDeInput>
+        <Button>Cadastrar Usuário</Button>
+      </Form>
+
+    </Container>
 
   )
 }
 
-export default App
+export default Home
