@@ -1,6 +1,6 @@
 import { Titulo, Container, ImagemCentral, Form, CaixaDeInput, Input, InputLabel, Button } from "./style";
 
-import Usuarios from './assets/users.png'
+import Usuarios from '../../assets/users.png'
 
 function Home() {
 
