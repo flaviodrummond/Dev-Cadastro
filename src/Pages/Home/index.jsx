@@ -1,4 +1,4 @@
-import {useRef} from "react";
+import { useRef } from "react";
 import api from "../../Services/api";
 import { Titulo, Container, ImagemCentral, Form, CaixaDeInput, Input, InputLabel, Button } from "./style";
 
@@ -7,20 +7,18 @@ import Usuarios from '../../assets/users.png'
 function Home() {
 
   const PegarNome = useRef()
-  const PegarCpf = useRef()
+  const PegarIdade = useRef()
   const PegarEmail = useRef()
 
   async function RegistrarNovoUsuario() {
-    const data =  await api.post('/usuarios', {
+    await api.post('/usuario', {
       name: PegarNome.current.value,
-      cpf: PegarCpf.current.value,
+      age: parseInt(PegarIdade.current.value),
       email: PegarEmail.current.value
     })
-
-    console.log(data)
   }
 
-  
+
 
 
   return (
@@ -37,23 +35,23 @@ function Home() {
 
         <CaixaDeInput>
 
-            <div>
-              <InputLabel>
-                Nome <span>*</span>
-              </InputLabel>
-              <Input type="text" placeholder="Nome do usuário" ref={PegarNome} />
-            </div>
+          <div>
+            <InputLabel>
+              Nome <span>*</span>
+            </InputLabel>
+            <Input type="text" placeholder="Nome do usuário" ref={PegarNome} />
+          </div>
 
-            <div>
-              <InputLabel>
-                CPF <span>*</span>
-              </InputLabel>
-              <Input type="number" placeholder="CPF do usuário" ref={PegarCpf} />
-            </div>
+          <div>
+            <InputLabel>
+              Idade <span>*</span>
+            </InputLabel>
+            <Input type="number" placeholder="Idade do usuário" ref={PegarIdade} />
+          </div>
 
         </CaixaDeInput>
 
-        <div style={{width: '80%'}}>
+        <div style={{ width: '80%' }}>
           <InputLabel>
             E-mail <span>*</span>
           </InputLabel>
