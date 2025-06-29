@@ -1,8 +1,9 @@
 import { Button } from "./style";
 
-function BotaoPadrao() {
+function BotaoPadrao({children, ...prosp}) {
+
     return (
-        <Button></Button>
+        <Button {...prosp}>{children}</Button>
     )
 }
 

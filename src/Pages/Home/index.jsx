@@ -1,9 +1,8 @@
 import { useRef } from "react";
 import api from "../../Services/api";
-import { Titulo, Container, ImagemCentral, Form, CaixaDeInput, Input, InputLabel} from "./style";
-
-import Usuarios from '../../assets/users.png'
+import { Titulo, Container, Form, CaixaDeInput, Input, InputLabel} from "./style";
 import Button from "../../Components/Button";
+import ImagemCentral from "../../Components/ImagemCentral";
 
 function Home() {
 
@@ -25,11 +24,8 @@ function Home() {
   return (
 
     <Container>
-      <ImagemCentral>
 
-        <img src={Usuarios} alt="Imagem de usuarios" />
-
-      </ImagemCentral>
+      <ImagemCentral/>
 
       <Form>
         <Titulo> Cadastro de Clientes </Titulo>
