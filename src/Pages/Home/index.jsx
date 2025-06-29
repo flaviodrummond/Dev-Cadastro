@@ -1,8 +1,9 @@
 import { useRef } from "react";
 import api from "../../Services/api";
-import { Titulo, Container, ImagemCentral, Form, CaixaDeInput, Input, InputLabel, Button } from "./style";
+import { Titulo, Container, ImagemCentral, Form, CaixaDeInput, Input, InputLabel} from "./style";
 
 import Usuarios from '../../assets/users.png'
+import Button from "../../Components/Button";
 
 function Home() {
 
