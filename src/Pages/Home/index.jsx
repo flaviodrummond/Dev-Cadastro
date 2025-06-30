@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import api from "../../Services/api";
-import { Titulo, Container, Form, CaixaDeInput, Input, InputLabel} from "./style";
+import { useNavigate } from "react-router-dom";
+import { Titulo, Container, Form, CaixaDeInput, Input, InputLabel } from "./style";
 import Button from "../../Components/Button";
 import ImagemCentral from "../../Components/ImagemCentral";
 
@@ -9,6 +10,7 @@ function Home() {
   const PegarNome = useRef()
   const PegarIdade = useRef()
   const PegarEmail = useRef()
+  const UseNavigate = useNavigate()
 
   async function RegistrarNovoUsuario() {
     await api.post('/usuario', {
@@ -25,7 +27,7 @@ function Home() {
 
     <Container>
 
-      <ImagemCentral/>
+      <ImagemCentral />
 
       <Form>
         <Titulo> Cadastro de Clientes </Titulo>
@@ -55,9 +57,10 @@ function Home() {
           <Input type="email" placeholder="E-mail do usuário" ref={PegarEmail} />
         </div>
 
-        <Button type="button" onClick={RegistrarNovoUsuario}>Cadastrar Cliente</Button>
+        <Button type="button" onClick={RegistrarNovoUsuario} theme="primeiro">Cadastrar Cliente</Button>
       </Form>
 
+      <Button type="button" onClick={() => UseNavigate('/lista-de-clientes')} >Lista de Clientes</Button>
     </Container>
 
   )

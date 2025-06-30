@@ -6,7 +6,7 @@ function ListUser() {
         <div>
             <ImagemCentral/>
             <h1>Lista de Clientes</h1>
-            <Button></Button>
+            <Button>Voltar</Button>
         </div>
     )
 }
