@@ -1,9 +1,10 @@
 import { useRef } from "react";
 import api from "../../Services/api";
 import { useNavigate } from "react-router-dom";
-import { Titulo, Container, Form, CaixaDeInput, Input, InputLabel } from "./style";
+import { Container, Form, CaixaDeInput, Input, InputLabel } from "./style";
 import Button from "../../Components/Button";
 import ImagemCentral from "../../Components/ImagemCentral";
+import TituloPrincipal from "../../Components/Título";
 
 function Home() {
 
@@ -30,7 +31,7 @@ function Home() {
       <ImagemCentral />
 
       <Form>
-        <Titulo> Cadastro de Clientes </Titulo>
+        <TituloPrincipal/>
 
         <CaixaDeInput>
 

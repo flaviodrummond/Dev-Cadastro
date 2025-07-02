@@ -19,14 +19,6 @@ export const Form = styled.form`
     max-width: 600px;
 `
 
-export const Titulo = styled.h2`
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 500;
-`
-
 export const CaixaDeInput = styled.div`
     display: flex;
     gap: 20px;
